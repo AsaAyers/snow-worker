@@ -1,0 +1,1 @@
+importScripts('/_dist_/push.sw.js')
