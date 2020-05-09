@@ -2,8 +2,14 @@ import * as React from "/web_modules/react.js";
 import * as ReactDOM from "/web_modules/react-dom.js";
 import App from "./App.js";
 import "./index.css";
-ReactDOM.render( /*#__PURE__*/React.createElement(React.StrictMode, null, /*#__PURE__*/React.createElement(App, null)), document.getElementById("root"));
-navigator.serviceWorker.register('/sw.js');
+ReactDOM.render( /*#__PURE__*/React.createElement(React.StrictMode, null, /*#__PURE__*/React.createElement(App, null)), document.getElementById("root")); // I'm hiding the path from the bundler so that I can use the `public/sw.js` If
+// I don't do this then the bundler sees this and complains the file doesn't
+// exist. Even though the bundler sees the path, it doesn't actually make
+// `sw.js` a new entry point. It also doesn't pick up the importScripts in sw.js
+// to make push.sw.js a new entry point.
+
+const swPath = './sw.js';
+navigator.serviceWorker.register(swPath);
 
 function urlBase64ToUint8Array(base64String) {
   const padding = '='.repeat((4 - base64String.length % 4) % 4);
