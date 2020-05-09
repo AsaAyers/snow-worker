@@ -3,6 +3,7 @@
     "prepare": "snowpack",
     "start": "snowpack dev",
     "build": "snowpack build && workbox generateSW",
+    "deploy": "gh-pages -d build",
     "test": "jest"
   },
   "webDependencies": {},
@@ -10,6 +11,7 @@
     "@snowpack/app-scripts-react": "^0.3.3",
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/react": "^10.0.3",
+    "gh-pages": "^2.2.0",
     "jest": "^25.4.0",
     "parcel-bundler": "^1.12.4",
     "react": "^16.13.0",

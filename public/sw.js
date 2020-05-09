@@ -1,1 +1,1 @@
-importScripts('/_dist_/push.sw.js')
+importScripts('./_dist_/push.sw.js')
