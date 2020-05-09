@@ -2,7 +2,9 @@
   "scripts": {
     "prepare": "snowpack",
     "start": "snowpack dev",
-    "build": "snowpack build",
+    "_buildComment": "removing module is a temporary workaround for https://www.pika.dev/npm/snowpack/discuss/163",
+    "build": "snowpack build && sed -i s/'type=\"module\" '//g build/index.html",
+    "serve": "npx http-server build",
     "test": "jest"
   },
   "webDependencies": {},
