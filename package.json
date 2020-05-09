@@ -2,8 +2,8 @@
   "scripts": {
     "prepare": "snowpack",
     "start": "snowpack dev",
-    "build": "snowpack build && workbox generateSW",
-    "deploy": "gh-pages -d build",
+    "build": "snowpack build && workbox generateSW && touch build/.nojekyll",
+    "deploy": "gh-pages --dotfiles -d build",
     "test": "jest"
   },
   "webDependencies": {},
