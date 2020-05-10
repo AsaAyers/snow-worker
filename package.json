@@ -2,7 +2,7 @@
   "scripts": {
     "prepare": "snowpack",
     "start": "snowpack dev",
-    "build": "snowpack build",
+    "build": "snowpack build && cp public/.nojekyll snow-worker/",
     "deploy": "gh-pages --dotfiles -d snow-worker",
     "test": "jest"
   },
