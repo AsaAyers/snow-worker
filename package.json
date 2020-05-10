@@ -2,7 +2,7 @@
   "scripts": {
     "prepare": "snowpack",
     "start": "snowpack dev",
-    "build": "snowpack build && cp public/.nojekyll snow-worker/",
+    "build": "snowpack build && cp public/.nojekyll snow-worker/ && workbox generateSW",
     "deploy": "gh-pages --dotfiles -d snow-worker",
     "test": "jest"
   },
@@ -17,6 +17,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "snowpack": "^2.0.0-0",
-    "typescript": "^3.8.0"
+    "typescript": "^3.8.0",
+    "workbox": "0.0.0"
   }
 }
