@@ -3,7 +3,7 @@
     "prepare": "snowpack",
     "start": "snowpack dev",
     "build": "snowpack build",
-    "deploy": "gh-pages --dotfiles -d build",
+    "deploy": "gh-pages --dotfiles -d snow-worker",
     "test": "jest"
   },
   "webDependencies": {},

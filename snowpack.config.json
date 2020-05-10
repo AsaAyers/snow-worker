@@ -1,7 +1,9 @@
 {
   "extends": "@snowpack/app-scripts-react",
   "homepage": "/snow-worker/",
-  "devOptions": {},
+  "devOptions": {
+    "out": "snow-worker"
+  },
   "installOptions": {
     "installTypes": true
   }
